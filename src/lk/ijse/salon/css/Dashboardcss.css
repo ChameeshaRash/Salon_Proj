@@ -1,0 +1,12 @@
+.              {
+
+}
+
+.munuButton:hover{
+    -fx-background-color: #F9F5F5;
+
+}
+
+.munuButton:pressed{
+    -fx-background-color: #EBD0DE;
+}

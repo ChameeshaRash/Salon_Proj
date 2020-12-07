@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextField fx:id="ProductTypePrice" labelFloat="true" layoutX="321.0" layoutY="88.0" promptText="ProductType Price" />
+      <JFXTextField fx:id="SkinTypeID" labelFloat="true" layoutX="98.0" layoutY="135.0" promptText="SkinType ID" />
+      <JFXTextField fx:id="SkinTypePrice" labelFloat="true" layoutX="321.0" layoutY="135.0" promptText="SkinType Price" />
+      <JFXTextField fx:id="ProductTypeID" labelFloat="true" layoutX="98.0" layoutY="88.0" promptText="ProductType ID" />
+      <JFXTextField fx:id="TreatmentTypeID" labelFloat="true" layoutX="98.0" layoutY="28.0" promptText="TreatmentType ID" />
+      <JFXTextField fx:id="TreatmentTypePrice" layoutX="351.0" layoutY="28.0" promptText="TreatmentType Price" />
+      <JFXTextField layoutX="366.0" layoutY="220.0" promptText="Blance" />
+      <JFXTextField labelFloat="true" layoutX="389.0" layoutY="274.0" promptText="Amount" />
+      <JFXTextField fx:id="hairTypeID" labelFloat="true" layoutX="92.0" layoutY="175.0" promptText="hairType ID" />
+      <JFXTextField fx:id="hairTypePrice" labelFloat="true" layoutX="330.0" layoutY="175.0" promptText="hairType Price" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="852.0" style="-fx-background-color: #b29eab;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.TreatmentTypeController">
+   <children>
+      <Label contentDisplay="RIGHT" layoutX="351.0" layoutY="32.0" text="Treatment Type" textAlignment="CENTER" textFill="#68145b">
+         <font>
+            <Font name="Cambria Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txttreatmenttypeId" labelFloat="true" layoutX="168.0" layoutY="116.0" onAction="#txttreatmenttypeId_onAction" promptText="Treatment Type ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txttype" labelFloat="true" layoutX="168.0" layoutY="172.0" onAction="#txttype_onAction" promptText="Type">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtprice" labelFloat="true" layoutX="168.0" layoutY="227.0" onAction="#txtprice_onAction" promptText="Price">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btsave" layoutX="543.0" layoutY="108.0" onAction="#btsave_onAction" prefHeight="43.0" prefWidth="155.0" text="Save">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btupdate" layoutX="554.0" layoutY="230.0" onAction="#btupdate_onAction" prefHeight="42.0" prefWidth="144.0" text="Update">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btdelete" layoutX="554.0" layoutY="164.0" onAction="#btdelete_onAction" prefHeight="45.0" prefWidth="144.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="treatmentTypeTable" layoutX="99.0" layoutY="324.0" onMouseClicked="#hairTable_onAction" prefHeight="243.0" prefWidth="703.0">
+         <columns>
+            <TableColumn prefWidth="223.0" text="Treatment Type ID" />
+            <TableColumn prefWidth="228.0" text="Type" />
+            <TableColumn prefWidth="251.0" text="Price" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

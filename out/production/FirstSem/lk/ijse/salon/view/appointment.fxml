@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="852.0" style="-fx-background-color: #b29eab;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.AppointmentController">
+   <children>
+      <Label contentDisplay="RIGHT" layoutX="279.0" layoutY="21.0" text="Appointment" textAlignment="CENTER" textFill="#68145b">
+         <font>
+            <Font name="Cambria Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txttaapointmentId" labelFloat="true" layoutX="23.0" layoutY="105.0" onAction="#txttaapointmentId_onAction" promptText="Appointment ID" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtname" labelFloat="true" layoutX="23.0" layoutY="164.0" onAction="#txtname_onAction" promptText="Name" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txttelNo" labelFloat="true" layoutX="23.0" layoutY="219.0" onAction="#txttelNo_onAction" promptText="Tel No" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btsave" layoutX="685.0" layoutY="195.0" onAction="#btsave_onAction" prefHeight="50.0" prefWidth="144.0" text="Save">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btupdate" layoutX="694.0" layoutY="337.0" onAction="#btupdate_onAction" prefHeight="42.0" prefWidth="144.0" text="Update">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btdelete" layoutX="694.0" layoutY="264.0" onAction="#btdelete_onAction" prefHeight="45.0" prefWidth="144.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="treatmentTypeTable" layoutX="15.0" layoutY="442.0" onMouseClicked="#hairTable_onAction" prefHeight="130.0" prefWidth="511.0">
+         <columns>
+            <TableColumn prefWidth="124.0" text="Appointment Id" />
+            <TableColumn prefWidth="125.0" text="Treatment Id" />
+            <TableColumn prefWidth="139.0" text="App Date " />
+            <TableColumn prefWidth="128.0" text="App Time" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txttreatmentid" labelFloat="true" layoutX="272.0" layoutY="105.0" onAction="#txttreatmentid_onAction" promptText="Treatment Id" style="-fx-border-radius: 40;" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXRadioButton fx:id="successID" layoutX="297.0" layoutY="247.0" text="Success">
+         <toggleGroup>
+            <ToggleGroup fx:id="AllergyTest" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <Label layoutX="265.0" layoutY="219.0" text="Allergy Test :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="FailedID" layoutX="391.0" layoutY="247.0" text="Failed" toggleGroup="$AllergyTest" />
+      <JFXRadioButton fx:id="CheYes" layoutX="295.0" layoutY="323.0" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="prCheTreatment" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <Label layoutX="265.0" layoutY="262.0" prefHeight="50.0" prefWidth="144.0" text="Previous Chemical Treatment :" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="CheNo" layoutX="394.0" layoutY="323.0" text="No" toggleGroup="$prCheTreatment" />
+      <JFXRadioButton fx:id="MedYesID" layoutX="297.0" layoutY="399.0" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="PrMedTreatment" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <Label layoutX="266.0" layoutY="344.0" prefHeight="50.0" prefWidth="204.0" text="Previous Medical Treatment :" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="MedNoID" layoutX="394.0" layoutY="399.0" text="No" toggleGroup="$PrMedTreatment" />
+      <JFXComboBox fx:id="comtreatmentTid" layoutX="544.0" layoutY="111.0" onAction="#comtreatmentTid_onAction" promptText="TreatmentType ID" />
+      <JFXComboBox fx:id="comProId" layoutX="544.0" layoutY="198.0" onAction="#comProId_onAction" promptText="ProductType ID" />
+      <JFXComboBox fx:id="comSkinT" layoutX="544.0" layoutY="267.0" onAction="#comSkinT_onAction" promptText="SkinType ID" />
+      <JFXComboBox fx:id="comhairT" layoutX="545.0" layoutY="349.0" onAction="#comhairT_onAction" promptText="hairType ID" />
+      <Line endX="25.0" endY="5.0" layoutX="210.0" layoutY="101.0" startX="25.0" startY="306.0" />
+      <JFXTextField fx:id="txttreatmentTName" labelFloat="true" layoutX="545.0" layoutY="156.0" onAction="#txttreatmentTName_onAction" promptText="Treatment Name" />
+      <JFXTextField fx:id="txtProName" labelFloat="true" layoutX="545.0" layoutY="236.0" onAction="#txtProName_onAction" promptText="Product Name" />
+      <JFXTextField fx:id="txtskinT" labelFloat="true" layoutX="545.0" layoutY="311.0" onAction="#txtskinT_onAction" promptText="Skin Type" />
+      <JFXTextField fx:id="txthairT" labelFloat="true" layoutX="545.0" layoutY="392.0" onAction="#txthairT_onAction" promptText="Hair Type" />
+      <Line endX="25.0" endY="5.0" layoutX="476.0" layoutY="101.0" startX="25.0" startY="306.0" />
+      <JFXTextField fx:id="txtdates" labelFloat="true" layoutX="23.0" layoutY="275.0" onAction="#txtdates_onAction" promptText="Date" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txttimes" labelFloat="true" layoutX="23.0" layoutY="321.0" onAction="#txttimes_onAction" promptText="Time" unFocusColor="BLACK" />
+      <JFXDatePicker fx:id="txtdate" layoutX="270.0" layoutY="152.0" onAction="#txtdate_onAction" prefHeight="25.0" prefWidth="177.0" promptText="App Date" />
+      <JFXTimePicker fx:id="txttime" layoutX="269.0" layoutY="183.0" onAction="#txttime_onAction" prefHeight="25.0" prefWidth="177.0" promptText="App Time" />
+      <Line endX="25.0" endY="5.0" layoutX="669.0" layoutY="106.0" startX="25.0" startY="306.0" />
+      <JFXTextField fx:id="txtTreatmentprice" labelFloat="true" layoutX="680.0" layoutY="448.0" promptText="Treatment Price" />
+      <JFXTextField fx:id="txtProductPrice" labelFloat="true" layoutX="668.0" layoutY="492.0" promptText="Product Price" />
+      <JFXTextField fx:id="txtSkinPrice" labelFloat="true" layoutX="668.0" layoutY="525.0" promptText="Skin Price" />
+      <JFXTextField fx:id="txtHaiPrice" labelFloat="true" layoutX="668.0" layoutY="572.0" promptText="Hair Price" />
+      <AnchorPane fx:id="root" layoutX="-3.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" visible="false">
+         <children>
+            <JFXTextField fx:id="ProductTypePrice" labelFloat="true" layoutX="351.0" layoutY="76.0" promptText="ProductType Price" />
+            <JFXTextField fx:id="SkinTypeID" labelFloat="true" layoutX="98.0" layoutY="135.0" promptText="ProductType ID" />
+            <JFXTextField fx:id="SkinTypePrice" labelFloat="true" layoutX="351.0" layoutY="135.0" promptText="SkinType Price" />
+            <JFXTextField fx:id="ProductTypeID" labelFloat="true" layoutX="98.0" layoutY="110.0" promptText="HairType ID" />
+            <JFXTextField fx:id="TreatmentTypeID" labelFloat="true" layoutX="98.0" layoutY="76.0" promptText="TreatmentType ID" />
+            <JFXTextField fx:id="TreatmentTypePrice" layoutX="351.0" layoutY="28.0" promptText="TreatmentType Price" />
+            <JFXTextField fx:id="txtblance" labelFloat="true" layoutX="351.0" layoutY="348.0" onAction="#txtblance_onAction" promptText="Blance" />
+            <JFXTextField fx:id="txtAmount" labelFloat="true" layoutX="351.0" layoutY="302.0" onAction="#txtAmount_onAction" promptText="Amount" />
+            <JFXTextField fx:id="hairTypeID" labelFloat="true" layoutX="98.0" layoutY="200.0" promptText="SkinType ID" />
+            <JFXTextField fx:id="hairTypePrice" labelFloat="true" layoutX="351.0" layoutY="200.0" onAction="#hairTypePrice_onAction" promptText="hairType Price" />
+            <JFXTextField fx:id="AppointmentId" labelFloat="true" layoutX="98.0" layoutY="262.0" promptText="Appointment Id" />
+            <JFXTextField fx:id="txtTotalID" labelFloat="true" layoutX="351.0" layoutY="250.0" onAction="#txtTotalIDOn_Action" promptText="Total" />
+            <JFXButton fx:id="txtprint" layoutX="534.0" layoutY="16.0" onAction="#txtprint_onAction" text="Print" />
+            <JFXTextField fx:id="PaymentID" labelFloat="true" layoutX="78.0" layoutY="16.0" promptText="Payment ID" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

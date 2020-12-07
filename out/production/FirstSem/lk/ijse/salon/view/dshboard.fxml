@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1027.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.salon.controller.DshboardController">
+   <children>
+      <VBox layoutY="52.0" prefHeight="588.0" prefWidth="190.0" style="-fx-background-color: pink;">
+         <children>
+            <JFXButton fx:id="btndashboard" buttonType="RAISED" onAction="#btndashboard_OnAction" prefHeight="85.0" prefWidth="190.0" styleClass="munuButton" stylesheets="@../css/Dashboardcss.css" text="DashBoard" textFill="#970669">
+               <font>
+                  <Font name="SansSerif Regular" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" cache="true" cacheHint="SCALE_AND_ROTATE" fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnappointment" buttonType="RAISED" onAction="#btnappointment_OnAction" prefHeight="99.0" prefWidth="190.0" styleClass="munuButton" stylesheets="@../css/Dashboardcss.css" text="Appoinment" textFill="#970669">
+               <font>
+                  <Font name="SansSerif Regular" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" cache="true" cacheHint="SCALE_AND_ROTATE" fitHeight="32.0" fitWidth="35.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Appointment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btntreatmentType" buttonType="RAISED" onAction="#btntreatmentType_OnAction" prefHeight="97.0" prefWidth="190.0" styleClass="munuButton" stylesheets="@../css/Dashboardcss.css" text="Treatement Type" textAlignment="CENTER" textFill="#970669" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" blendMode="MULTIPLY" cache="true" cacheHint="SCALE_AND_ROTATE" fitHeight="40.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/treatmentType.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnProductType" buttonType="RAISED" onAction="#btnProductType_OnAction" prefHeight="95.0" prefWidth="190.0" styleClass="munuButton" stylesheets="@../css/Dashboardcss.css" text="Product Type" textAlignment="CENTER" textFill="#970669" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" blendMode="MULTIPLY" cache="true" cacheHint="SCALE_AND_ROTATE" fitHeight="40.0" fitWidth="44.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/product.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnSkinType" buttonType="RAISED" onAction="#btnSkinType_OnAction" prefHeight="87.0" prefWidth="190.0" styleClass="munuButton" stylesheets="@../css/Dashboardcss.css" text="Skin Type" textAlignment="CENTER" textFill="#970669" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="40.0" fitWidth="38.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/face.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHairType" buttonType="RAISED" onAction="#btnHairType_OnAction" prefHeight="100.0" prefWidth="190.0" styleClass="munuButton" stylesheets="@../css/Dashboardcss.css" text="Hair Type" textAlignment="CENTER" textFill="#970669" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="47.0" fitWidth="44.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/hair.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnPayment" buttonType="RAISED" onAction="#btnPayment_OnAction" prefHeight="96.0" prefWidth="190.0" styleClass="munuButton" stylesheets="@../css/Dashboardcss.css" text="View Appointment" textAlignment="CENTER" textFill="#970669" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="44.0" fitWidth="48.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/payment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane layoutX="188.0" layoutY="-1.0" prefHeight="38.0" prefWidth="839.0" style="-fx-background-color: #ffe8d3;" />
+      <AnchorPane fx:id="root" layoutX="187.0" layoutY="37.0" prefHeight="609.0" prefWidth="852.0" />
+      <Label fx:id="lblDate" alignment="CENTER" contentDisplay="CENTER" layoutY="-2.0" prefHeight="59.0" prefWidth="99.0" style="-fx-border-color: #F08080; -fx-border-width: 5;" textFill="#c92525" />
+      <Label fx:id="lblTime" alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="-3.0" prefHeight="59.0" prefWidth="92.0" style="-fx-border-color: #F08080; -fx-border-width: 5;" textAlignment="CENTER" textFill="#c92525" />
+   </children>
+</AnchorPane>
